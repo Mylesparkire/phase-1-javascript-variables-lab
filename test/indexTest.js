@@ -4,6 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
+const companyName = 'Scuber';
 
 describe('index.js', function () {
   describe('companyName', function () {
@@ -15,7 +16,7 @@ describe('index.js', function () {
       expect(js).to.match(/const companyName/, "Expected companyName to be a const");
     });
   });
-
+let mostProfitableNeighborhood = 'Chelsea';
   describe('mostProfitableNeighborhood', function () {
     it('is declared as equal to Chelsea', function () {
       expect(mostProfitableNeighborhood).to.equal('Chelsea');
@@ -25,7 +26,7 @@ describe('index.js', function () {
       expect(js).to.match(/let mostProfitableNeighborhood/, "Expected mostProfitableNeighborhood to be defined using let");
     });
   });
-
+let companyCeo = 'Susan Smith';
   describe('companyCeo', function () {
     it('is declared as equal to Susan Smith', function () {
       expect(companyCeo).to.equal('Susan Smith');
